@@ -11,6 +11,8 @@
     <div class="links">
       <button class="button is-primary" v-on:click="clickIllust()">イラスト</button>
       <button class="button is-primary" v-on:click="clickSponsor()">協賛者リスト</button>
+      <button class="button is-primary" v-on:click="clickMessage()">メッセージ</button>
+      <button class="button is-primary" v-on:click="clickVideoTest()">動画テスト</button>
     </div>
   </section>
 </template>
@@ -34,6 +36,14 @@ export default {
     clickSponsor: function() {
       console.log("clickSponsor");
       this.$router.push("/anjuinami/20190812/Sponsor");
+    },
+    clickMessage: function() {
+      console.log("clickMessage");
+      this.$router.push("/anjuinami/20190812/Message");
+    },
+    clickVideoTest: function() {
+      console.log("clickVideoTest");
+      this.$router.push("/anjuinami/20190812/VideoTest");
     }
   }
 };

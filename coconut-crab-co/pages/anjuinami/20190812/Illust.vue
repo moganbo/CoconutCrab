@@ -11,6 +11,9 @@
         イラスト
       </h2>
     </div>
+    <div>
+      <img src="https://firebasestorage.googleapis.com/v0/b/coconut-crab-co.appspot.com/o/anjuinami%2F20190812%2Fimage%2Ftest.png?alt=media&token=c679c0f3-aeae-479b-988d-f9daae09e683">
+    </div>
   </section>
 </template>
 

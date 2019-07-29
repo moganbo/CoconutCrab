@@ -37,12 +37,20 @@ module.exports = {
     }
   },
   modules: [
+    "@nuxtjs/axios",
     [
       "nuxt-buefy",
       {
         css: ["~/assets/css/buefy.scss"]
-        // materialDesignIcons: false
       }
-    ]
-  ]
+    ],
+    ["@nuxtjs/google-analytics", { id: "UA-140579929-2" }]
+  ],
+  axios: {
+    proxy: true
+  },
+  proxy: {
+    "/api": "https://firebasestorage.googleapis.com"
+  },
+  plugins: ["~/plugins/vue-youtube.js", "~/plugins/axios.js"]
 };
