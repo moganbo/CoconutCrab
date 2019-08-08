@@ -52,5 +52,6 @@ module.exports = {
   proxy: {
     "/api": "https://firebasestorage.googleapis.com"
   },
-  plugins: ["~/plugins/vue-youtube.js", "~/plugins/axios.js"]
+  plugins: ["~/plugins/vue-youtube.js", "~/plugins/axios.js"],
+  css: ["~assets/css/styles.scss"]
 };

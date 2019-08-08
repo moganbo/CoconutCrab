@@ -1,7 +1,12 @@
 [
   {
-    "origin": ["*"],
-    "method": ["GET"],
+    "origin": [
+      "https://coconut-crab-co.web.app",
+      "coconut-crab-co.firebaseapp.com",
+      "http://localhost:3000"
+    ],
+    "responseHeader": ["Content-Type", "Access-Control-Allow-Origin"],
+    "method": ["GET", "OPTION"],
     "maxAgeSeconds": 3600
   }
 ]

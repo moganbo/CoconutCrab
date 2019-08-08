@@ -16,14 +16,16 @@ html {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
 }
-
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+}
 *,
 *:before,
 *:after {
   box-sizing: border-box;
   margin: 0;
 }
-
 .button--green {
   display: inline-block;
   border-radius: 4px;
@@ -32,12 +34,10 @@ html {
   text-decoration: none;
   padding: 10px 30px;
 }
-
 .button--green:hover {
   color: #fff;
   background-color: #3b8070;
 }
-
 .button--grey {
   display: inline-block;
   border-radius: 4px;
@@ -47,7 +47,6 @@ html {
   padding: 10px 30px;
   margin-left: 15px;
 }
-
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
@@ -55,7 +54,51 @@ html {
 
 .container {
   min-height: 100vh;
+  min-width: 100vw;
   text-align: center;
+}
+.fixed-bg {
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #e0ffff;
+}
+.cover-white {
+  min-height: 100vh;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.cover-black {
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.title {
+  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
+  display: block;
+  font-weight: 300;
+  font-size: 38px;
+  color: #35495e;
+  letter-spacing: 1px;
+}
+.subtitle {
+  font-weight: 300;
+  font-size: 24px;
+  color: #526488;
+  word-spacing: 5px;
+  padding-bottom: 15px;
+}
+.links {
+  padding-top: 8px;
+}
+.footer {
+  background-color: transparent;
+}
+.br::before {
+  content: "\A";
+  white-space: pre;
 }
 </style>
 
