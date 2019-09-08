@@ -22,7 +22,10 @@
             <!-- <button class="button is-primary" v-on:click="clickVideoTest()">動画テスト</button> -->
             <p> ↑ 押してみてね♪</p>
           </div>
-          <div style="height: 54px;"></div>
+          <div 
+          class="footer">
+            <p class="credit">企画：やしがにカンパニー🌴🦀<br> Twitter：<a href="https://twitter.com/CoconutCrab_Co">@CoconutCrab_Co</a></p>
+          </div>
         </div>
       </div>
     </div>
@@ -62,16 +65,17 @@ export default {
 </script>
 
 <style scoped>
-.bg {
-  background-image: url(/anjuinami/20190812/background.jpg);
-}
-
 .title {
   font-family: "NamePop";
 }
 
+.bg {
+  background-image: url(/anjuinami/20190812/background.jpg);
+}
+
 .top-illust {
-  margin: 24px 0 24px 0;
+  max-width: calc(100% - 48px);
+  margin: 24px 24px 24px 24px;
 }
 
 .button {
@@ -85,8 +89,17 @@ export default {
 
 .footer {
   height: 54px;
+  vertical-align: bottom;
 }
 @media only screen and (max-width: 750px) {
+  .fixed-bg {
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #e0ffff;
+  }
   .top-illust {
     max-width: calc(100% - 32px);
     margin: 0 16px 0 16px;

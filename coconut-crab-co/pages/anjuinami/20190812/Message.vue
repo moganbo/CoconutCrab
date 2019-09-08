@@ -19,9 +19,10 @@
             <div 
               class="balloon balloon-right"
               v-for="(message, index) in messages" 
-              v-if="message.trim()"
+              v-if="message.text.trim()"
               v-bind:key="index">
-                <p class="message-area">{{message.trim()}}</p>
+                <p class="message-area">{{message.text.trim()}}</p>
+                <p v-if="message.name" class="name-area">by {{message.name.trim()}}</p>
             </div>
             <div class="message-bottom"></div>
           </div>
@@ -55,7 +56,13 @@ export default {
     console.log(response);
     return {
       m: response.data,
-      messages: response.data.split(",")
+      messages: response.data.split(",").map(function(element, index, array) {
+        var elements = element.split("||");
+        return {
+          text: elements[0],
+          name: elements[1]
+        };
+      })
     };
   },
   mounted: function() {},
@@ -69,10 +76,6 @@ export default {
 </script>
 
 <style scoped>
-.bg {
-  background-image: url(/anjuinami/20190812/background_2.jpg);
-}
-
 .title {
   font-family: "NamePop";
 }
@@ -137,7 +140,16 @@ export default {
   margin: 0 32px 0 108px;
 }
 .message-area {
+  width: 100%;
   display: inline-block;
+  text-align: left;
+  font-size: 1.4em;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.name-area {
+  display: inline-block;
+  text-align: center;
   font-size: 1.4em;
   white-space: pre-wrap;
   word-wrap: break-word;
@@ -149,8 +161,28 @@ export default {
   .message-root {
     margin: 0 16px 0 16px;
   }
-  .balloon-right {
-    margin: 54px 0 0 24px;
+}
+@media only screen and (min-width: 751px) {
+  .bg {
+    background-image: url(/anjuinami/20190812/background_2.jpg);
+  }
+}
+</style>
+
+<style>
+@media only screen and (max-width: 750px) {
+  body::before {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-bottom: 108px;
+    content: "";
+    z-index: -1;
+    background-image: url(/anjuinami/20190812/background_2.jpg);
   }
 }
 </style>

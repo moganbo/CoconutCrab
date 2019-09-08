@@ -57,14 +57,6 @@ body {
   min-width: 100vw;
   text-align: center;
 }
-.fixed-bg {
-  min-height: 100vh;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-color: #e0ffff;
-}
 .cover-white {
   min-height: 100vh;
   background-color: rgba(255, 255, 255, 0.6);
@@ -99,6 +91,16 @@ body {
 .br::before {
   content: "\A";
   white-space: pre;
+}
+@media only screen and (min-width: 751px) {
+  .fixed-bg {
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #e0ffff;
+  }
 }
 </style>
 
